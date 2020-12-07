@@ -1,7 +1,7 @@
 let input;
 let total = 0;
 
-while(true) {
+do {
     input = prompt('Введите число');
 
     if (isNaN(input)) {
@@ -9,10 +9,7 @@ while(true) {
         continue;
     }
 
-    if (input === null) {
-        alert(`Общая сумма чисел равна ${total}`);
-        break;
-    }
+    total += Number(input);
+} while (input !== null);
 
-  total += Number(input);
-}
+alert(`Общая сумма чисел равна ${total}`);
